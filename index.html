@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenRising — Eco-Friendly Compostable Packaging Manufacturer</title>
+  <meta name="description" content="GreenRising manufactures premium compostable bagasse tableware and sustainable food packaging. B2B wholesale, FDA & BPI certified, global shipping.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #1B1B1B;
+      background: #FAF9F6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; }
+
+    /* Colors */
+    :root {
+      --green-dark: #1B4332;
+      --green-primary: #2D6A4F;
+      --green-light: #40916C;
+      --green-pale: #D8F3DC;
+      --green-surface: #F0FAF3;
+      --gold: #B8860B;
+      --cream: #FAF9F6;
+      --text-dark: #1B1B1B;
+      --text-muted: #5A5A5A;
+      --white: #FFFFFF;
+      --border: #E0E0E0;
+      --border-light: #EDEDED;
+      --shadow: 0 4px 20px rgba(0,0,0,0.06);
+      --shadow-hover: 0 8px 32px rgba(0,0,0,0.10);
+      --radius: 12px;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: var(--green-dark);
+      color: var(--white);
+      font-size: 0.82rem;
+      padding: 8px 0;
+    }
+    .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar-left { display: flex; gap: 24px; }
+    .top-bar-left a { opacity: 0.85; transition: opacity 0.25s; }
+    .top-bar-left a:hover { opacity: 1; }
+    .top-bar-right { display: flex; gap: 16px; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.78rem; }
+
+    /* Header */
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .header .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.3rem; font-weight: 700; color: var(--green-dark);
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: var(--green-primary); border-radius: 50%;
+      color: var(--white); font-size: 0.9rem;
+    }
+    .nav { display: flex; gap: 28px; }
+    .nav a {
+      font-size: 0.9rem; font-weight: 500;
+      color: var(--text-muted);
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.25s;
+    }
+    .nav a:hover, .nav a.active { color: var(--green-primary); border-bottom-color: var(--green-primary); }
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 28px; font-weight: 600; font-size: 0.9rem;
+      border-radius: var(--radius);
+      transition: all 0.25s; white-space: nowrap;
+    }
+    .btn-primary { background: var(--green-primary); color: var(--white); }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+    .btn-outline { border: 2px solid var(--green-primary); color: var(--green-primary); background: transparent; }
+    .btn-outline:hover { background: var(--green-primary); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--green-primary); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(165deg, var(--green-dark) 0%, var(--green-primary) 50%, var(--green-light) 100%);
+      color: var(--white); padding: 100px 0; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute;
+      top: -200px; right: -150px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+    }
+    .hero .container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 20px; color: var(--white);
+    }
+    .hero p { font-size: 1.1rem; opacity: 0.88; margin-bottom: 32px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px; padding: 6px 16px;
+      font-size: 0.8rem; color: rgba(255,255,255,0.8); margin-bottom: 20px;
+    }
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      background: rgba(255,255,255,0.06); border-radius: var(--radius);
+      padding: 30px; border: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-number { display: block; font-size: 1.6rem; font-weight: 700; color: var(--white); }
+    .hero-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+    /* Section Header */
+    .section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+    .section-label {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--green-light); margin-bottom: 12px;
+    }
+    .section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 12px; color: var(--text-dark); }
+    .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+    /* Product Categories */
+    .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .prod-card {
+      background: var(--white); border-radius: var(--radius);
+      overflow: hidden; border: 1px solid var(--border-light);
+      transition: all 0.3s;
+    }
+    .prod-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+   .prod-card-img {
+     width: 100%; height: 200px;
+     background: linear-gradient(135deg, var(--green-surface), var(--green-pale));
+      overflow: hidden;
+    }
+    .prod-card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+   }
+    .prod-card-body { padding: 20px 24px 24px; }
+    .prod-card-body h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--text-dark); }
+    .prod-card-body p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; margin-bottom: 12px; }
+    .prod-tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 500;
+      padding: 4px 10px; border-radius: 4px;
+      background: var(--green-surface); color: var(--green-primary);
+      margin-right: 6px; margin-bottom: 4px;
+    }
+
+    /* Industry Solutions */
+    .solutions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .solution-card {
+      text-align: center; padding: 32px 16px;
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--border-light); transition: all 0.25s;
+    }
+    .solution-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .solution-icon { font-size: 2rem; margin-bottom: 12px; }
+    .solution-card h4 { font-size: 0.95rem; margin-bottom: 6px; }
+    .solution-card p { font-size: 0.82rem; color: var(--text-muted); }
+
+    /* Certifications */
+    .cert-section { background: var(--white); }
+    .cert-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .cert-item { text-align: center; opacity: 0.7; transition: opacity 0.25s; }
+    .cert-item:hover { opacity: 1; }
+   .cert-badge {
+     width: 72px; height: 72px; border-radius: 50%;
+     border: 2px solid var(--border);
+      padding: 4px;
+      background: var(--white);
+    }
+    .cert-item span { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+    .cert-badge img {
+      width: 100%; height: 100%; object-fit: contain;
+      border-radius: 50%;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-primary));
+      text-align: center; padding: 80px 0;
+    }
+    .cta h2 { color: var(--white); font-size: 2rem; margin-bottom: 12px; }
+    .cta p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 28px; font-size: 1.05rem; }
+
+    /* Footer */
+    .footer { background: var(--green-dark); color: var(--white); padding: 60px 0 30px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+    .footer h4 { font-size: 1rem; margin-bottom: 16px; color: var(--white); }
+    .footer p { font-size: 0.85rem; opacity: 0.7; line-height: 1.6; }
+    .footer ul li { margin-bottom: 8px; }
+    .footer ul li a { font-size: 0.85rem; opacity: 0.6; transition: opacity 0.25s; }
+    .footer ul li a:hover { opacity: 1; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 40px; padding-top: 24px;
+      display: flex; justify-content: space-between;
+      font-size: 0.78rem; opacity: 0.5;
+    }
+
+    /* Mobile */
+    .mobile-toggle { display: none; flex-direction: column; gap: 5px; padding: 4px; background: none; border: none; cursor: pointer; }
+    .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; }
+
+    @media (max-width: 768px) {
+      .hero .container { grid-template-columns: 1fr; }
+      .nav { display: none; }
+      .mobile-toggle { display: flex; }
+      .prod-grid, .solutions-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .prod-grid, .solutions-grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@greenrisingpac.com">info@greenrisingpac.com</a>
+    </div>
+    <div class="top-bar-right">
+      <span>FDA · BPI · EN13432 Certified</span>
+      <span>·</span>
+      <span>Global Shipping</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo">
+      <div class="logo-icon">🌱</div>
+      <span>GreenRising</span>
+    </a>
+    <nav class="nav">
+      <a href="/" class="active">Home</a>
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Request Quote</a>
+      <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <div class="hero-badge">🌍 B2B Wholesale · Factory Direct</div>
+      <h1>Compostable Tableware & Packaging for a Greener Tomorrow</h1>
+      <p>As a leading manufacturer of bagasse tableware and compostable packaging, GreenRising supplies distributors, food service operators, and retailers across 30+ countries.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-white">Explore Products</a>
+        <a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4); color:white;">Get a Quote</a>
+      </div>
+      <div class="hero-stats" style="margin-top: 40px;">
+        <div class="hero-stat">
+          <span class="hero-stat-number">5,000+</span>
+          <span class="hero-stat-label">Tonnes Annual Capacity</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">30+</span>
+          <span class="hero-stat-label">Countries Served</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">8</span>
+          <span class="hero-stat-label">Int'l Certifications</span>
+        </div>
+      </div>
+    </div>
+    <div style="background: rgba(255,255,255,0.05); border-radius: 16px; padding: 40px; border: 1px solid rgba(255,255,255,0.08);">
+      <div style="text-align: center; font-size: 4rem; margin-bottom: 20px;">🌱</div>
+      <h3 style="color: var(--white); font-size: 1.2rem; margin-bottom: 12px;">Made from Sugarcane Bagasse</h3>
+      <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.7;">Our products are crafted from sugarcane fiber — a renewable byproduct of sugar production. 100% compostable, microwave-safe, and oil-resistant.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Products</span>
+      <h2>Compostable Solutions for Every Need</h2>
+      <p>Premium bagasse tableware and eco-friendly food packaging for the food service industry.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card"><div class="prod-card-img"><img src="plates-product.png" alt="Bagasse Plates &amp; Bowls"></div><div class="prod-card-body"><h3>Bagasse Plates &amp; Bowls</h3><p>Premium sugarcane bagasse tableware including compartment trays, round &amp; square plates, and deep bowls. Microwave, oven &amp; freezer safe. Grease-resistant and sturdy even with hot foods.</p><span class="prod-tag">Bagasse</span><span class="prod-tag">Compostable</span><span class="prod-tag">Microwave-safe</span></div></div>
+      <div class="prod-card"><div class="prod-card-img"><img src="bags-product.png" alt="Compostable Bags"></div><div class="prod-card-body"><h3>Compostable Bags</h3><p>Shopping, trash, and produce bags made from corn starch and PBAT. Fully biodegradable in commercial composting conditions. Strong tear-resistance with customizable sizes and thickness.</p><span class="prod-tag">Corn Starch</span><span class="prod-tag">Biodegradable</span><span class="prod-tag">Customizable</span></div></div>
+      <div class="prod-card"><div class="prod-card-img"><img src="packaging-product.png" alt="Custom Packaging"></div><div class="prod-card-body"><h3>Custom Packaging</h3><p>Full OEM/ODM service for customized compostable packaging. Custom sizes, shapes, colors, and branding. MOQ from 10,000 pcs. Get your eco-friendly packaging designed to your exact specifications.</p><span class="prod-tag">OEM/ODM</span><span class="prod-tag">Custom Size</span><span class="prod-tag">Branding</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Industry Solutions -->
+<section id="industries" style="background: var(--white);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Industries We Serve</span>
+      <h2>Packaging Solutions for Every Application</h2>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card"><div class="solution-icon">☕</div><h4>Coffee & Beverage</h4><p>Cups, lids, sleeves</p></div>
+      <div class="solution-card"><div class="solution-icon">🍔</div><h4>Fast Food</h4><p>Clamshells, trays, wraps</p></div>
+      <div class="solution-card"><div class="solution-icon">🥐</div><h4>Bakery & Dessert</h4><p>Boxes, plates, containers</p></div>
+      <div class="solution-card"><div class="solution-icon">🏃</div><h4>Restaurant To-Go</h4><p>Takeout boxes, bowls, bags</p></div>
+      <div class="solution-card"><div class="solution-icon">🌭</div><h4>Street Food</h4><p>Trays, wraps, napkins</p></div>
+      <div class="solution-card"><div class="solution-icon">🚗</div><h4>Drive-Thru</h4><p>Packaging solutions</p></div>
+      <div class="solution-card"><div class="solution-icon">🥗</div><h4>Salad & Fresh</h4><p>Containers, bowls</p></div>
+      <div class="solution-card"><div class="solution-icon">📦</div><h4>Wholesale</h4><p>Bulk supply, distribution</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Why GreenRising</span>
+      <h2>Built for B2B. Backed by Science.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      <div style="text-align:center; padding:32px 16px; background:var(--white); border-radius:var(--radius); border:1px solid var(--border-light);">
+        <div style="font-size:2rem; margin-bottom:16px;">✅</div>
+        <h4 style="margin-bottom:8px; font-size:1.05rem;">Certified Compostable</h4>
+        <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">FDA, BPI, EN 13432, ASTM D6400 certified</p>
+      </div>
+      <div style="text-align:center; padding:32px 16px; background:var(--white); border-radius:var(--radius); border:1px solid var(--border-light);">
+        <div style="font-size:2rem; margin-bottom:16px;">🌿</div>
+        <h4 style="margin-bottom:8px; font-size:1.05rem;">100% Plant-Based</h4>
+        <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">Made from renewable sugarcane bagasse. PFAS & BPA free.</p>
+      </div>
+      <div style="text-align:center; padding:32px 16px; background:var(--white); border-radius:var(--radius); border:1px solid var(--border-light);">
+        <div style="font-size:2rem; margin-bottom:16px;">🏭</div>
+        <h4 style="margin-bottom:8px; font-size:1.05rem;">Factory Direct</h4>
+        <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">Own manufacturing with full traceability. No middlemen.</p>
+      </div>
+      <div style="text-align:center; padding:32px 16px; background:var(--white); border-radius:var(--radius); border:1px solid var(--border-light);">
+        <div style="font-size:2rem; margin-bottom:16px;">🎨</div>
+        <h4 style="margin-bottom:8px; font-size:1.05rem;">Full Customization</h4>
+        <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">OEM/ODM. Custom sizes, shapes, and branding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="cert-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Certifications</span>
+      <h2>Globally Recognized Standards</h2>
+      <p>Every product line meets the strictest compostability and food-safety requirements in the EU and North America.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-item"><div class="cert-badge"><img src="ok-compost.png" alt="OK Compost TUV Austria"></div></div>
+      <div class="cert-item"><div class="cert-badge"><img src="bpi-logo.png" alt="BPI Certified"></div></div>
+      <div class="cert-item"><div class="cert-badge"><img src="seedling-logo.svg" alt="EN 13432 Seedling"></div></div>
+      <div class="cert-item"><div class="cert-badge"><img src="astm-d6400.png" alt="ASTM D6400"></div></div>
+      <div class="cert-item"><div class="cert-badge"><img src="fda-food-contact.png" alt="FDA Food Contact"></div></div>
+      <div class="cert-item"><div class="cert-badge"><img src="iso9001.png" alt="ISO 9001"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta">
+  <div class="container">
+    <h2>Ready to Make the Switch?</h2>
+    <p>Tell us about your requirements and get a tailored quote within 24 hours.</p>
+    <a href="mailto:info@greenrisingpac.com" class="btn btn-primary" style="background:var(--white); color:var(--green-primary); font-size:1rem; padding:16px 40px;">
+      📧 Request a Quote →
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>🌱 GreenRising</h4>
+        <p>Leading B2B supplier of biodegradable tableware and sustainable packaging. Serving distributors, retailers, and food service operators across the EU, North America, and Asia.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">Bagasse Tableware</a></li>
+          <li><a href="#">Clamshell Boxes</a></li>
+          <li><a href="#">Paper Cups</a></li>
+          <li><a href="#">Compostable Bags</a></li>
+          <li><a href="#">Cutlery & Straws</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Certifications</a></li>
+          <li><a href="#">Sample Request</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@greenrisingpac.com">info@greenrisingpac.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Alibaba Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 GreenRising. All rights reserved.</div>
+      <div><a href="#" style="margin-right:16px;">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
